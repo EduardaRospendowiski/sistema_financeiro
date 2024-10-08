@@ -17,27 +17,27 @@
           <div class="col-sm-12 col-md-4" style="margin-top: 10%";>
             <i class="fa-solid fa-coins"></i>
  
-            <form>
+            <form action="php/insertU.php" method="post">
                 <div class="mb-3">
                   <label for="Nome" class="form-label">Nome</label>
-                  <input type="text" class="form-control" id="Nome" aria-describedby="emailHelp">
+                  <input type="text"name="nome" class="form-control" id="Nome" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
                   <label for="email" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                  <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
-                  <label for="Cargo" class="form-label">Cargo</label>
-                  <input type="text" class="form-control" id="Cargo" aria-describedby="emailHelp">
+                  <label for="Cargo"class="form-label">Cargo</label>
+                  <input type="text" name="cargo" class="form-control" id="Cargo" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
                   <label for="senha" class="form-label">Senha</label>
-                  <input type="password" class="form-control" id="senha">
+                  <input type="password" name="senha" class="form-control" id="senha">
                 </div class="button">
                 <button style="margin-left: 35px;" type="submit" class="btn btn-dark">Entrar</button>
-                <button style="margin-left: 2px;" type="submit" class="btn btn-dark">
-                <a href="Cadastro.html">Cadastrar</a>
-                </button>
+                <a href="Cadastro.html"><button style="margin-left: 2px;" type="button" class="btn btn-dark">
+                Cadastrar
+                </button></a>
                  
               </form>
           </div>
@@ -48,3 +48,32 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>  
 </body>
 </html>
+
+
+
+
+
+<!-- create database db_contabilidade;
+use db_contabilidade;
+create table tb_user(
+id_usuario int auto_increment primary key,
+nome varchar(40),
+email varchar(45),
+cargo varchar(45),
+senha text
+);
+create table tb_categoria(
+id_categoria int auto_increment primary key,
+nome varchar(40),
+tipo bit,
+descricao varchar(30)
+);
+create table tb_lançamento (
+id_lancamento int auto_increment primary key,
+data_lancamento date,
+ds_lancamento varchar(40),
+fk_usuario int,
+fk_categoria int,
+foreign key (fk_usuario) references tb_user (id_usuario),
+ foreign key (fk_categoria) references tb_categoria (id_categoria)
+); -->
